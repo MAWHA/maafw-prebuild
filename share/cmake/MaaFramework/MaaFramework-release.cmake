@@ -8,7 +8,6 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 # Import target "MaaFramework::MaaUtils" for configuration "Release"
 set_property(TARGET MaaFramework::MaaUtils APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(MaaFramework::MaaUtils PROPERTIES
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "opencv_core;opencv_imgproc;opencv_imgcodecs"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/MaaUtils.dll"
   )
 
@@ -19,7 +18,7 @@ list(APPEND _cmake_import_check_files_for_MaaFramework::MaaUtils "${_IMPORT_PREF
 set_property(TARGET MaaFramework::MaaFramework APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(MaaFramework::MaaFramework PROPERTIES
   IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/MaaFramework.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "MaaFramework::MaaUtils;opencv_core;opencv_imgproc;opencv_imgcodecs;fastdeploy_ppocr;ONNXRuntime::ONNXRuntime"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "MaaFramework::MaaUtils;fastdeploy_ppocr;ONNXRuntime::ONNXRuntime"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/MaaFramework.dll"
   )
 
@@ -30,7 +29,7 @@ list(APPEND _cmake_import_check_files_for_MaaFramework::MaaFramework "${_IMPORT_
 set_property(TARGET MaaFramework::MaaToolkit APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(MaaFramework::MaaToolkit PROPERTIES
   IMPORTED_IMPLIB_RELEASE "${_IMPORT_PREFIX}/lib/MaaToolkit.lib"
-  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "MaaFramework::MaaUtils;opencv_core;opencv_imgproc;opencv_imgcodecs"
+  IMPORTED_LINK_DEPENDENT_LIBRARIES_RELEASE "MaaFramework::MaaUtils"
   IMPORTED_LOCATION_RELEASE "${_IMPORT_PREFIX}/bin/MaaToolkit.dll"
   )
 
